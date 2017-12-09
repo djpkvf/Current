@@ -86,6 +86,8 @@ class RipplePracticeViewController: UIViewController {
             //print(users[0].email)
             rangeLabel.text = "There are " + String(users.count) + " users nearby"
             rangeLabel.font = UIFont(name: "Roboto", size: 17)
+            
+            
             break
         case 1:
             /*var hooks = */fetchHooks(range: yardStrata)
@@ -128,6 +130,7 @@ class RipplePracticeViewController: UIViewController {
         var numberOfUsers = 20
         let numberOfHooks = 12
         rangeLabel.text = "There are " + String(numberOfUsers) + " Users and " + String(numberOfHooks) + " Hooks around you."
+        updatePosition()
     }
     
     func fetchUsers(range : Int) /*-> [CurrentUser]*/{
@@ -136,6 +139,37 @@ class RipplePracticeViewController: UIViewController {
             let reference = Firebase.Database.database().reference(fromURL: "https://current-79dd0.firebaseio.com/")
               var foundUsers: [CurrentUser] = []
                 var index = 0
+        
+        /*geoFire.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: "firebase-hq") { (error) in
+         if (error != nil) {
+         println("An error occured: \(error)")
+         } else {
+         println("Saved location successfully!")
+         }
+         
+         
+         '
+         
+         
+         
+         
+         
+         let center = CLLocation(latitude: 37.7832889, longitude: -122.4056973)
+         // Query locations at [37.7832889, -122.4056973] with a radius of 600 meters
+         var circleQuery = geoFire.queryAtLocation(center, withRadius: 0.6)
+         
+         // Query location by region
+         let span = MKCoordinateSpanMake(0.001, 0.001)
+         let region = MKCoordinateRegionMake(center.coordinate, span)
+         var regionQuery = geoFire.queryWithRegion(region)
+         
+         
+         
+         
+         var queryHandle = query.observeEventType(.KeyEntered, withBlock: { (key: String!, location: CLLocation!) in
+         println("Key '\(key)' entered the search area and is at location '\(location)'")
+         })
+         }*/
                 reference.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
             
                 if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
@@ -156,20 +190,27 @@ class RipplePracticeViewController: UIViewController {
                     
                     
                     self.users = foundUsers
-                           // return foundUsers
+                    self.updatePosition()
             }
         })
         
-
- //return foundUsers
     }
     
     func fetchHooks(range : Int){
         //hooks.count
         let numberOfHooks = 12
         rangeLabel.text = "There are " + String(numberOfHooks) + " Hooks around you."
+        
+        updatePosition()
     }
     
+    func updatePosition(){
+        
+    }
+    
+    func updatePosition(location : CLLocation){
+        
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

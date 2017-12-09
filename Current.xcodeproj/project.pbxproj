@@ -32,6 +32,15 @@
 		9BC4521A1F0651560026333C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452191F0651560026333C /* LogInViewController.swift */; };
 		9BC4521C1F087B780026333C /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */; };
 		9BEA65A51FB19D30004B204C /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA65A41FB19D30004B204C /* CurrentUser.swift */; };
+		9BF639E61FDBB73D00DB800D /* ListHooksAndUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF639E51FDBB73D00DB800D /* ListHooksAndUsersViewController.swift */; };
+		9BF639E81FDBB98600DB800D /* icons8-mail-filter-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF639E71FDBB98600DB800D /* icons8-mail-filter-50.png */; };
+		9BF639EA1FDBBD4E00DB800D /* FiltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF639E91FDBBD4E00DB800D /* FiltersTableViewController.swift */; };
+		9BF639ED1FDBC29F00DB800D /* icons8-alphabetical-sorting-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF639EB1FDBC29D00DB800D /* icons8-alphabetical-sorting-50.png */; };
+		9BF639EE1FDBC29F00DB800D /* icons8-sort-by-recently-viewed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF639EC1FDBC29E00DB800D /* icons8-sort-by-recently-viewed-50.png */; };
+		9BF639F01FDBC53B00DB800D /* icons8-shuffle-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF639EF1FDBC53B00DB800D /* icons8-shuffle-50.png */; };
+		9BF639F41FDBC97000DB800D /* icons8-omnichannel-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF639F11FDBC96D00DB800D /* icons8-omnichannel-50.png */; };
+		9BF639F51FDBC97000DB800D /* icons8-very-popular-topic-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF639F21FDBC96E00DB800D /* icons8-very-popular-topic-50.png */; };
+		9BF639F61FDBC97000DB800D /* icons8-contacts-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF639F31FDBC96F00DB800D /* icons8-contacts-50.png */; };
 		FB34ABEB37FAE0849269F3F2 /* Pods_CurrentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DDB3976949A6211F6048B7 /* Pods_CurrentUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +98,15 @@
 		9BC452191F0651560026333C /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ../LogInViewController.swift; sourceTree = "<group>"; };
 		9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		9BEA65A41FB19D30004B204C /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		9BF639E51FDBB73D00DB800D /* ListHooksAndUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHooksAndUsersViewController.swift; sourceTree = "<group>"; };
+		9BF639E71FDBB98600DB800D /* icons8-mail-filter-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-mail-filter-50.png"; sourceTree = "<group>"; };
+		9BF639E91FDBBD4E00DB800D /* FiltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersTableViewController.swift; sourceTree = "<group>"; };
+		9BF639EB1FDBC29D00DB800D /* icons8-alphabetical-sorting-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-alphabetical-sorting-50.png"; sourceTree = "<group>"; };
+		9BF639EC1FDBC29E00DB800D /* icons8-sort-by-recently-viewed-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-sort-by-recently-viewed-50.png"; sourceTree = "<group>"; };
+		9BF639EF1FDBC53B00DB800D /* icons8-shuffle-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-shuffle-50.png"; sourceTree = "<group>"; };
+		9BF639F11FDBC96D00DB800D /* icons8-omnichannel-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-omnichannel-50.png"; sourceTree = "<group>"; };
+		9BF639F21FDBC96E00DB800D /* icons8-very-popular-topic-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-very-popular-topic-50.png"; sourceTree = "<group>"; };
+		9BF639F31FDBC96F00DB800D /* icons8-contacts-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-contacts-50.png"; sourceTree = "<group>"; };
 		B96277F01F8F270AD17065E3 /* Pods_Current.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Current.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDA5F978B0BAE75D87AD648 /* Pods-CurrentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurrentUITests/Pods-CurrentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB27090FDDC93F7FD72E7450 /* Pods-Current.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Current/Pods-Current.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +169,8 @@
 				9B41D2711FAC28F200EF7838 /* HUBTabBarViewController.swift */,
 				9B41D2731FAC441700EF7838 /* NavViewController.swift */,
 				9B41D2751FAC4CE500EF7838 /* ProfileViewController.swift */,
+				9BF639E51FDBB73D00DB800D /* ListHooksAndUsersViewController.swift */,
+				9BF639E91FDBBD4E00DB800D /* FiltersTableViewController.swift */,
 			);
 			name = V2;
 			sourceTree = "<group>";
@@ -233,6 +253,13 @@
 		9BC4521E1F0A1BAD0026333C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9BF639F31FDBC96F00DB800D /* icons8-contacts-50.png */,
+				9BF639F11FDBC96D00DB800D /* icons8-omnichannel-50.png */,
+				9BF639F21FDBC96E00DB800D /* icons8-very-popular-topic-50.png */,
+				9BF639EF1FDBC53B00DB800D /* icons8-shuffle-50.png */,
+				9BF639EB1FDBC29D00DB800D /* icons8-alphabetical-sorting-50.png */,
+				9BF639EC1FDBC29E00DB800D /* icons8-sort-by-recently-viewed-50.png */,
+				9BF639E71FDBB98600DB800D /* icons8-mail-filter-50.png */,
 				9B46A98F1F99C8BD006A6E93 /* CircleTransparentBackground.png */,
 				9B9690241F970A500071A785 /* CurrentC.png */,
 			);
@@ -391,9 +418,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB03C571E23994B00BDA47C /* LaunchScreen.storyboard in Resources */,
+				9BF639ED1FDBC29F00DB800D /* icons8-alphabetical-sorting-50.png in Resources */,
 				9B66FE841FA587F700CF33B3 /* GoogleService-Info.plist in Resources */,
+				9BF639F61FDBC97000DB800D /* icons8-contacts-50.png in Resources */,
+				9BF639E81FDBB98600DB800D /* icons8-mail-filter-50.png in Resources */,
 				9B9690251F970A500071A785 /* CurrentC.png in Resources */,
+				9BF639EE1FDBC29F00DB800D /* icons8-sort-by-recently-viewed-50.png in Resources */,
+				9BF639F01FDBC53B00DB800D /* icons8-shuffle-50.png in Resources */,
 				9BB03C541E23994B00BDA47C /* Assets.xcassets in Resources */,
+				9BF639F51FDBC97000DB800D /* icons8-very-popular-topic-50.png in Resources */,
+				9BF639F41FDBC97000DB800D /* icons8-omnichannel-50.png in Resources */,
 				9B46A9901F99C8BD006A6E93 /* CircleTransparentBackground.png in Resources */,
 				9BB03C4F1E23994B00BDA47C /* Main.storyboard in Resources */,
 			);
@@ -592,6 +626,7 @@
 				9BB03C4A1E23994B00BDA47C /* AppDelegate.swift in Sources */,
 				9BC4521C1F087B780026333C /* TextFieldTableViewCell.swift in Sources */,
 				9BC4521A1F0651560026333C /* LogInViewController.swift in Sources */,
+				9BF639E61FDBB73D00DB800D /* ListHooksAndUsersViewController.swift in Sources */,
 				9BB03C521E23994B00BDA47C /* Current.xcdatamodeld in Sources */,
 				9B41D2721FAC28F200EF7838 /* HUBTabBarViewController.swift in Sources */,
 				9BEA65A51FB19D30004B204C /* CurrentUser.swift in Sources */,
@@ -603,6 +638,7 @@
 				9B41D2761FAC4CE500EF7838 /* ProfileViewController.swift in Sources */,
 				9B41D2741FAC441700EF7838 /* NavViewController.swift in Sources */,
 				9B46A98E1F99C256006A6E93 /* RipplePracticeViewController.swift in Sources */,
+				9BF639EA1FDBBD4E00DB800D /* FiltersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
