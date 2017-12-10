@@ -87,7 +87,7 @@ class RipplePracticeViewController: UIViewController {
             rangeLabel.text = "There are " + String(users.count) + " users nearby"
             rangeLabel.font = UIFont(name: "Roboto", size: 17)
             resultType = 0
-            
+              performSegue(withIdentifier: "displayQuery", sender: nil)
             break
         case 1:
             /*var hooks = */fetchHooks(range: yardStrata)
@@ -133,6 +133,9 @@ class RipplePracticeViewController: UIViewController {
         let numberOfHooks = 12
         rangeLabel.text = "There are " + String(numberOfUsers) + " Users and " + String(numberOfHooks) + " Hooks around you."
         updatePosition()
+//        prepare(for: "displayQuery", sender: self)
+
+        //self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     func fetchUsers(range : Int) /*-> [CurrentUser]*/{
@@ -227,6 +230,7 @@ class RipplePracticeViewController: UIViewController {
                 
             case 0:
                     secondController.myUsers = users
+                    print("goodjob")
                 break;
                 
             case 1:

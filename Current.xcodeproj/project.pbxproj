@@ -18,6 +18,7 @@
 		9B66FE841FA587F700CF33B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B66FE831FA587F700CF33B3 /* GoogleService-Info.plist */; };
 		9B66FE861FA6309400CF33B3 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B66FE851FA6309400CF33B3 /* RegisterUserViewController.swift */; };
 		9B768DC21FBCDCD300663F56 /* Hook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B768DC11FBCDCD300663F56 /* Hook.swift */; };
+		9B84AA481FDDB1A00049A896 /* InspectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84AA471FDDB19F0049A896 /* InspectUserViewController.swift */; };
 		9B88ADF01F99C0C500B73F81 /* RippleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88ADEF1F99C0C500B73F81 /* RippleTableViewController.swift */; };
 		9B9690211F945A900071A785 /* LaunchScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9690201F945A900071A785 /* LaunchScreenTableViewController.swift */; };
 		9B9690251F970A500071A785 /* CurrentC.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9690241F970A500071A785 /* CurrentC.png */; };
@@ -80,6 +81,7 @@
 		9B66FE831FA587F700CF33B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B66FE851FA6309400CF33B3 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		9B768DC11FBCDCD300663F56 /* Hook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hook.swift; sourceTree = "<group>"; };
+		9B84AA471FDDB19F0049A896 /* InspectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectUserViewController.swift; sourceTree = "<group>"; };
 		9B88ADEF1F99C0C500B73F81 /* RippleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleTableViewController.swift; sourceTree = "<group>"; };
 		9B9690201F945A900071A785 /* LaunchScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenTableViewController.swift; sourceTree = "<group>"; };
 		9B9690241F970A500071A785 /* CurrentC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CurrentC.png; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				9B41D2751FAC4CE500EF7838 /* ProfileViewController.swift */,
 				9BF639E51FDBB73D00DB800D /* ListHooksAndUsersViewController.swift */,
 				9BF639E91FDBBD4E00DB800D /* FiltersTableViewController.swift */,
+				9B84AA471FDDB19F0049A896 /* InspectUserViewController.swift */,
 			);
 			name = V2;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B84AA481FDDB1A00049A896 /* InspectUserViewController.swift in Sources */,
 				9B66FE861FA6309400CF33B3 /* RegisterUserViewController.swift in Sources */,
 				9BB03C4A1E23994B00BDA47C /* AppDelegate.swift in Sources */,
 				9BC4521C1F087B780026333C /* TextFieldTableViewCell.swift in Sources */,
