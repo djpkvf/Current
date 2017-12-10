@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1133BA26DF251787F2F2724F /* Pods_CurrentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20253A79DD6F797BD5CDEA36 /* Pods_CurrentTests.framework */; };
 		82DACFC8289D6C69D4BB3F9D /* Pods_Current.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96277F01F8F270AD17065E3 /* Pods_Current.framework */; };
+		8B8AE5911FDDBE7B00CD0A92 /* cArrowsLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8AE5901FDDBE7B00CD0A92 /* cArrowsLight.png */; };
 		9B41D2721FAC28F200EF7838 /* HUBTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41D2711FAC28F200EF7838 /* HUBTabBarViewController.swift */; };
 		9B41D2741FAC441700EF7838 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41D2731FAC441700EF7838 /* NavViewController.swift */; };
 		9B41D2761FAC4CE500EF7838 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41D2751FAC4CE500EF7838 /* ProfileViewController.swift */; };
@@ -69,6 +70,7 @@
 		3CF38D4F0DD571255298210B /* Pods-CurrentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrentUITests/Pods-CurrentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		610C33A82AD582C43A365481 /* Pods-Current.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current.release.xcconfig"; path = "Pods/Target Support Files/Pods-Current/Pods-Current.release.xcconfig"; sourceTree = "<group>"; };
 		8B552ADF1FABB2350072416B /* LabelTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		8B8AE5901FDDBE7B00CD0A92 /* cArrowsLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cArrowsLight.png; sourceTree = "<group>"; };
 		90DDB3976949A6211F6048B7 /* Pods_CurrentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B41D2711FAC28F200EF7838 /* HUBTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUBTabBarViewController.swift; sourceTree = "<group>"; };
 		9B41D2731FAC441700EF7838 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				9BF639E71FDBB98600DB800D /* icons8-mail-filter-50.png */,
 				9B46A98F1F99C8BD006A6E93 /* CircleTransparentBackground.png */,
 				9B9690241F970A500071A785 /* CurrentC.png */,
+				8B8AE5901FDDBE7B00CD0A92 /* cArrowsLight.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				9BF639ED1FDBC29F00DB800D /* icons8-alphabetical-sorting-50.png in Resources */,
 				9B66FE841FA587F700CF33B3 /* GoogleService-Info.plist in Resources */,
 				9BF639F61FDBC97000DB800D /* icons8-contacts-50.png in Resources */,
+				8B8AE5911FDDBE7B00CD0A92 /* cArrowsLight.png in Resources */,
 				9BF639E81FDBB98600DB800D /* icons8-mail-filter-50.png in Resources */,
 				9BF639F81FDCB24400DB800D /* icons8-delete-filled-50.png in Resources */,
 				9B9690251F970A500071A785 /* CurrentC.png in Resources */,

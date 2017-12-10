@@ -21,25 +21,31 @@ class RegisterUserViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(RegisterUserViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(RegisterUserViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
     }
-    */
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
     @IBAction func nextButton(_ sender: Any) {
     
         guard let email = emailTextField.text, let password = passwordTextField.text else{
@@ -47,10 +53,8 @@ class RegisterUserViewController: UIViewController {
             return
         }
         
-        if let firstName = firstNameTextField.text, let lastname = lastNameTextField.text, let userName = userNameTextField.text
-      {
-            if password == confirmPasswordTextField.text             {
-                
+        if let firstName = firstNameTextField.text, let lastname = lastNameTextField.text, let userName = userNameTextField.text {
+            if password == confirmPasswordTextField.text {
                 
                 Firebase.Auth.auth().createUser(withEmail: email, password: password, completion:{ (user, err) in
                     if let error = err {
@@ -59,38 +63,31 @@ class RegisterUserViewController: UIViewController {
                     }
              
                     let reference = Firebase.Database.database().reference(fromURL: "https://current-79dd0.firebaseio.com/")
-                   let usersReference = reference.child("users").child(userName)
-                  //  usersReference.updateChildValues(["someValue" : 123123])
+                    let usersReference = reference.child("users").child(userName)
+                    //  usersReference.updateChildValues(["someValue" : 123123])
                     
-                
                     let values = ["firstName" : firstName, "lastName" : lastname, "userName" : userName, "email" : email, "password" : password]
                     
                     usersReference.updateChildValues(values, withCompletionBlock: {(err,reference) in
-                        if err != nil{
-                            print(err)
+                        if err != nil {
+                            print(err!)
                             return
                         }
                         
-                      //  Firebase.Auth.auth().currentUser =
+                        //  Firebase.Auth.auth().currentUser =
                         print("Saved User successfully")
                         self.performSegue(withIdentifier: "logInCreate", sender: self)
-                    })                    //do suff
-                        })
-                
-
-           
+                        
+                    })
+                })
+            }
         }
-}
         else{
             print("PLEASE INSERT DATA")
         }
         
     }
-        
-        func login()
-        {
-            
-        }
+    func login() {
         
     }
-
+}
