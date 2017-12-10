@@ -17,15 +17,15 @@ class RipplePracticeViewController: UIViewController {
     var lastSize = 250.0
     var yardStrata = 100
     var strings = [String]()
+    //The Type of query we will be passing to the list
+    var resultType = -1
     @IBOutlet weak var segment: UISegmentedControl!
     //var users = [CurrentUser]()
     
     var users: [CurrentUser] = []
-    // var hooks : [hook]()
-    //var usersAndHooks : [user,hook]()
+    var hooks = [Hook]()
+  //  var usersAndHooks = [CurrentUser,Hook]()
     
-    
-
     @IBAction func changeRange(_ gestureRecognizer : UIPinchGestureRecognizer) {
       var range = gestureRecognizer.scale
         
@@ -86,14 +86,16 @@ class RipplePracticeViewController: UIViewController {
             //print(users[0].email)
             rangeLabel.text = "There are " + String(users.count) + " users nearby"
             rangeLabel.font = UIFont(name: "Roboto", size: 17)
-            
+            resultType = 0
             
             break
         case 1:
             /*var hooks = */fetchHooks(range: yardStrata)
+            resultType = 1
             break
         case 2:
             /*var usersAndHooks =*/ fetchUsersAndHooks(range: yardStrata)
+            resultType = 2
             break
             
         default:
@@ -217,6 +219,30 @@ class RipplePracticeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let secondController = segue.destination as! ListHooksAndUsersViewController
+        //secondController.parentVC = self
+        if segue.identifier == "displayQuery"
+        {
+            switch resultType{
+                
+            case 0:
+                    secondController.myUsers = users
+                break;
+                
+            case 1:
+                secondController.myHooks = hooks
+                break;
+                
+            case 2:
+                //secondController.myHooksAndUsers
+                break;
+                
+            default:
+                break;
+            }
+            
+        
+        }
     }
  
 }

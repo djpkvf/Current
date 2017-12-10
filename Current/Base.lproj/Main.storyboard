@@ -142,7 +142,7 @@
                                     <constraint firstAttribute="width" constant="375" id="n5S-5s-b18"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zdx-BG-faR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="zdx-BG-faR">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zdx-BG-faR" id="Yv6-uU-b0s">
@@ -151,6 +151,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ETK-Ut-7jo" id="s4e-g8-Jok"/>
+                                    <outlet property="delegate" destination="ETK-Ut-7jo" id="egL-PQ-f1f"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-2g-MJc">
                                 <rect key="frame" x="30" y="572" width="36" height="40"/>
@@ -160,26 +164,19 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="icons8-mail-filter-50.png"/>
                                 <connections>
-                                    <segue destination="JTe-EN-5KF" kind="popoverPresentation" popoverAnchorView="h8f-2g-MJc" id="aJp-d4-4h1">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="F4x-Qa-EGc" kind="presentation" identifier="filters" id="lMl-c1-OQE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hK-t6-hTw">
-                                <rect key="frame" x="101" y="572" width="36" height="40"/>
+                                <rect key="frame" x="172" y="572" width="36" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="9JM-6M-xlY"/>
                                     <constraint firstAttribute="height" constant="40" id="rC6-Ap-99p"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="icons8-alphabetical-sorting-50.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIZ-jy-jwY">
-                                <rect key="frame" x="172" y="572" width="36" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7kN-5k-aQF"/>
-                                    <constraint firstAttribute="width" constant="36" id="X9I-gf-R8y"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="icons8-shuffle-50.png"/>
+                                <connections>
+                                    <action selector="alphabetizeResults:" destination="ETK-Ut-7jo" eventType="touchUpInside" id="Pqj-MT-hn2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUF-nr-3Mh">
                                 <rect key="frame" x="243" y="572" width="36" height="40"/>
@@ -188,6 +185,9 @@
                                     <constraint firstAttribute="height" constant="40" id="x4d-Ue-uU9"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="icons8-omnichannel-50.png"/>
+                                <connections>
+                                    <action selector="connectionOrganize:" destination="ETK-Ut-7jo" eventType="touchUpInside" id="2JQ-Q0-fLt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dy7-Pw-jgO">
                                 <rect key="frame" x="314" y="572" width="36" height="40"/>
@@ -196,6 +196,20 @@
                                     <constraint firstAttribute="width" constant="36" id="SRU-Of-9yC"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="icons8-very-popular-topic-50.png"/>
+                                <connections>
+                                    <action selector="popularityOrganize:" destination="ETK-Ut-7jo" eventType="touchUpInside" id="LPd-mD-qHM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHu-hM-z4X">
+                                <rect key="frame" x="101" y="572" width="36" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="OEx-l5-REA"/>
+                                    <constraint firstAttribute="height" constant="40" id="xUo-8u-6H3"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icons8-delete-filled-50.png"/>
+                                <connections>
+                                    <action selector="cancelFilters:" destination="ETK-Ut-7jo" eventType="touchUpInside" id="b9Q-uW-6En"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,22 +217,24 @@
                             <constraint firstItem="l7p-75-Zuu" firstAttribute="top" secondItem="AoB-cH-B8i" secondAttribute="bottom" id="A2w-gv-WBv"/>
                             <constraint firstItem="LUF-nr-3Mh" firstAttribute="top" secondItem="l7p-75-Zuu" secondAttribute="bottom" constant="10" id="H9o-GX-Tj7"/>
                             <constraint firstItem="h8f-2g-MJc" firstAttribute="leading" secondItem="brq-1n-0WW" secondAttribute="leading" constant="30" id="IKe-3e-iCI"/>
-                            <constraint firstItem="fIZ-jy-jwY" firstAttribute="leading" secondItem="8hK-t6-hTw" secondAttribute="trailing" constant="35" id="JAf-Jb-mLZ"/>
+                            <constraint firstItem="LUF-nr-3Mh" firstAttribute="leading" secondItem="8hK-t6-hTw" secondAttribute="trailing" constant="35" id="LJ7-Q6-F7F"/>
                             <constraint firstItem="Dy7-Pw-jgO" firstAttribute="top" secondItem="l7p-75-Zuu" secondAttribute="bottom" constant="10" id="LZ7-Dw-z5L"/>
+                            <constraint firstItem="sHu-hM-z4X" firstAttribute="top" secondItem="l7p-75-Zuu" secondAttribute="bottom" constant="10" id="Nse-SQ-frL"/>
+                            <constraint firstItem="8hK-t6-hTw" firstAttribute="leading" secondItem="sHu-hM-z4X" secondAttribute="trailing" constant="35" id="RUX-Li-cb8"/>
                             <constraint firstItem="h8f-2g-MJc" firstAttribute="top" secondItem="l7p-75-Zuu" secondAttribute="bottom" constant="10" id="XXI-Sw-42H"/>
+                            <constraint firstItem="sHu-hM-z4X" firstAttribute="leading" secondItem="h8f-2g-MJc" secondAttribute="trailing" constant="35" id="cZW-9h-41V"/>
                             <constraint firstItem="AoB-cH-B8i" firstAttribute="top" secondItem="GU0-gl-6EC" secondAttribute="bottom" id="eQf-Ir-CLO"/>
                             <constraint firstItem="l7p-75-Zuu" firstAttribute="leading" secondItem="brq-1n-0WW" secondAttribute="leading" id="fqr-jL-owc"/>
                             <constraint firstItem="AoB-cH-B8i" firstAttribute="leading" secondItem="brq-1n-0WW" secondAttribute="leading" id="jYY-KE-ox4"/>
                             <constraint firstItem="8hK-t6-hTw" firstAttribute="top" secondItem="l7p-75-Zuu" secondAttribute="bottom" constant="10" id="sI7-hN-sYs"/>
-                            <constraint firstItem="8hK-t6-hTw" firstAttribute="leading" secondItem="h8f-2g-MJc" secondAttribute="trailing" constant="35" id="usp-Yd-ITa"/>
-                            <constraint firstItem="fIZ-jy-jwY" firstAttribute="top" secondItem="l7p-75-Zuu" secondAttribute="bottom" constant="10" id="v74-N9-ayP"/>
-                            <constraint firstItem="LUF-nr-3Mh" firstAttribute="leading" secondItem="fIZ-jy-jwY" secondAttribute="trailing" constant="35" id="vcK-JN-k7R"/>
                             <constraint firstItem="Dy7-Pw-jgO" firstAttribute="leading" secondItem="LUF-nr-3Mh" secondAttribute="trailing" constant="35" id="y6l-u8-a7D"/>
                             <constraint firstItem="l7p-75-Zuu" firstAttribute="centerX" secondItem="brq-1n-0WW" secondAttribute="centerX" id="yKF-uD-Xgr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alphabetize" destination="8hK-t6-hTw" id="5Tx-No-tNN"/>
                         <outlet property="searchDisplayController" destination="nwZ-KC-Fsl" id="4Uy-MQ-KXt"/>
+                        <outlet property="view" destination="l7p-75-Zuu" id="JW8-py-v7j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqQ-io-qma" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -263,7 +279,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcj-Dl-L88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="1206"/>
+            <point key="canvasLocation" x="428" y="1231"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WbH-rN-nie">
@@ -741,14 +757,63 @@
             </objects>
             <point key="canvasLocation" x="-1207.2" y="1468.5157421289357"/>
         </scene>
+        <!--Filters Table View Controller-->
+        <scene sceneID="JYp-s4-4pk">
+            <objects>
+                <tableViewController id="F4x-Qa-EGc" customClass="FiltersTableViewController" customModule="Current" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="biB-5A-gNE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Tt7-85-14o">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Filters" id="2bf-VG-XGS">
+                                    <barButtonItem key="leftBarButtonItem" title="Cancel" id="LuN-Do-ksc">
+                                        <connections>
+                                            <action selector="cancelFilters:" destination="F4x-Qa-EGc" id="9Se-q7-eor"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Submit" id="vZX-Kp-ze3">
+                                        <connections>
+                                            <action selector="submitFilters:" destination="F4x-Qa-EGc" id="AU1-ba-jBZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="WnA-9D-RTu">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WnA-9D-RTu" id="oF2-Ym-ZFA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F4x-Qa-EGc" id="EB0-pG-JCk"/>
+                            <outlet property="delegate" destination="F4x-Qa-EGc" id="l4C-6C-ZcM"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ttW-M0-Ucy"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYU-Pc-pV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="871"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CircleTransparentBackground.png" width="1600" height="1600"/>
         <image name="CurrentC.png" width="600" height="600"/>
         <image name="icons8-alphabetical-sorting-50.png" width="50" height="50"/>
+        <image name="icons8-delete-filled-50.png" width="50" height="50"/>
         <image name="icons8-mail-filter-50.png" width="50" height="50"/>
         <image name="icons8-omnichannel-50.png" width="50" height="50"/>
-        <image name="icons8-shuffle-50.png" width="50" height="50"/>
         <image name="icons8-very-popular-topic-50.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
