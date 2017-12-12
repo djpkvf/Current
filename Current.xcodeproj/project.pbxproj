@@ -10,6 +10,7 @@
 		1133BA26DF251787F2F2724F /* Pods_CurrentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20253A79DD6F797BD5CDEA36 /* Pods_CurrentTests.framework */; };
 		82DACFC8289D6C69D4BB3F9D /* Pods_Current.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96277F01F8F270AD17065E3 /* Pods_Current.framework */; };
 		8B8AE5911FDDBE7B00CD0A92 /* cArrowsLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8AE5901FDDBE7B00CD0A92 /* cArrowsLight.png */; };
+		8B8AE5931FDDCB2400CD0A92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8AE5921FDDCB2400CD0A92 /* LoginViewController.swift */; };
 		9B41D2721FAC28F200EF7838 /* HUBTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41D2711FAC28F200EF7838 /* HUBTabBarViewController.swift */; };
 		9B41D2741FAC441700EF7838 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41D2731FAC441700EF7838 /* NavViewController.swift */; };
 		9B41D2761FAC4CE500EF7838 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41D2751FAC4CE500EF7838 /* ProfileViewController.swift */; };
@@ -31,7 +32,6 @@
 		9BB03C6D1E23994C00BDA47C /* CurrentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB03C6C1E23994C00BDA47C /* CurrentUITests.swift */; };
 		9BC452161F05F7A10026333C /* OldCreateProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452151F05F7A10026333C /* OldCreateProfileTableViewController.swift */; };
 		9BC452181F05FB150026333C /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452171F05FB150026333C /* TextTableViewCell.swift */; };
-		9BC4521A1F0651560026333C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC452191F0651560026333C /* LogInViewController.swift */; };
 		9BC4521C1F087B780026333C /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */; };
 		9BEA65A51FB19D30004B204C /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA65A41FB19D30004B204C /* CurrentUser.swift */; };
 		9BF639E61FDBB73D00DB800D /* ListHooksAndUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF639E51FDBB73D00DB800D /* ListHooksAndUsersViewController.swift */; };
@@ -72,6 +72,7 @@
 		610C33A82AD582C43A365481 /* Pods-Current.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Current.release.xcconfig"; path = "Pods/Target Support Files/Pods-Current/Pods-Current.release.xcconfig"; sourceTree = "<group>"; };
 		8B552ADF1FABB2350072416B /* LabelTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		8B8AE5901FDDBE7B00CD0A92 /* cArrowsLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cArrowsLight.png; sourceTree = "<group>"; };
+		8B8AE5921FDDCB2400CD0A92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		90DDB3976949A6211F6048B7 /* Pods_CurrentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B41D2711FAC28F200EF7838 /* HUBTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUBTabBarViewController.swift; sourceTree = "<group>"; };
 		9B41D2731FAC441700EF7838 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		9BB03C6E1E23994C00BDA47C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BC452151F05F7A10026333C /* OldCreateProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldCreateProfileTableViewController.swift; sourceTree = "<group>"; };
 		9BC452171F05FB150026333C /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
-		9BC452191F0651560026333C /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ../LogInViewController.swift; sourceTree = "<group>"; };
 		9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		9BEA65A41FB19D30004B204C /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		9BF639E51FDBB73D00DB800D /* ListHooksAndUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHooksAndUsersViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +157,6 @@
 		9B88ADED1F99C04000B73F81 /* V1 */ = {
 			isa = PBXGroup;
 			children = (
-				9BC452191F0651560026333C /* LogInViewController.swift */,
 				9BC4521B1F087B780026333C /* TextFieldTableViewCell.swift */,
 				9BC452171F05FB150026333C /* TextTableViewCell.swift */,
 				9BC452151F05F7A10026333C /* OldCreateProfileTableViewController.swift */,
@@ -178,6 +177,7 @@
 				9BF639E51FDBB73D00DB800D /* ListHooksAndUsersViewController.swift */,
 				9BF639E91FDBBD4E00DB800D /* FiltersTableViewController.swift */,
 				9B84AA471FDDB19F0049A896 /* InspectUserViewController.swift */,
+				8B8AE5921FDDCB2400CD0A92 /* LoginViewController.swift */,
 			);
 			name = V2;
 			sourceTree = "<group>";
@@ -637,7 +637,7 @@
 				9B66FE861FA6309400CF33B3 /* RegisterUserViewController.swift in Sources */,
 				9BB03C4A1E23994B00BDA47C /* AppDelegate.swift in Sources */,
 				9BC4521C1F087B780026333C /* TextFieldTableViewCell.swift in Sources */,
-				9BC4521A1F0651560026333C /* LogInViewController.swift in Sources */,
+				8B8AE5931FDDCB2400CD0A92 /* LoginViewController.swift in Sources */,
 				9BF639E61FDBB73D00DB800D /* ListHooksAndUsersViewController.swift in Sources */,
 				9BB03C521E23994B00BDA47C /* Current.xcdatamodeld in Sources */,
 				9B41D2721FAC28F200EF7838 /* HUBTabBarViewController.swift in Sources */,
