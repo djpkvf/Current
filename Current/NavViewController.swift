@@ -59,7 +59,7 @@ class NavViewController: UINavigationController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "b"{
             print("hereeererererererererere")
-            let barViewControllers = segue.destination as! LogInViewController
+            let barViewControllers = segue.destination as! LoginViewController
         }
         
     }
