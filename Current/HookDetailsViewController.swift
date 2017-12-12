@@ -1,21 +1,26 @@
 //
-//  LogInViewController.swift
+//  HookDetailsViewController.swift
 //  Current
 //
-//  Created by Murphy Basil Ward on 6/30/17.
+//  Created by Murphy Basil Ward on 12/11/17.
 //  Copyright © 2017 Murphy Basil Ward. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
-    @IBOutlet weak var userNameTextField: UITextField!
+class HookDetailsViewController: UIViewController {
+
+    var myHook : Hook?
+    var parentVC : HooksViewController?
+    @IBOutlet weak var titleBar: UINavigationItem!
     
-    @IBOutlet weak var currentIcon: UIImageView!
-    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("You got this far")
+        if let hook = myHook{
+            titleBar.title = hook.name
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -24,10 +29,7 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-  
-    
-    }
+
     /*
     // MARK: - Navigation
 
@@ -38,4 +40,4 @@ class LogInViewController: UIViewController {
     }
     */
 
-
+}
