@@ -442,9 +442,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Tv4-6V-ooi" firstAttribute="centerX" secondItem="vx4-dN-lGp" secondAttribute="centerX" id="L73-Xg-gId"/>
+                            <constraint firstItem="Tv4-6V-ooi" firstAttribute="top" secondItem="hWz-QV-jac" secondAttribute="bottom" constant="77" id="UlJ-Zu-pk6"/>
                             <constraint firstItem="hWz-QV-jac" firstAttribute="centerX" secondItem="vx4-dN-lGp" secondAttribute="centerX" id="bXI-sm-3sZ"/>
                             <constraint firstItem="hWz-QV-jac" firstAttribute="top" secondItem="HOJ-rD-b77" secondAttribute="bottom" constant="32" id="f3U-2f-qbJ"/>
-                            <constraint firstItem="YUY-g4-AtG" firstAttribute="top" secondItem="Tv4-6V-ooi" secondAttribute="bottom" constant="31" id="pNA-Eq-A9k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sPI-Y0-tY6"/>
@@ -474,7 +474,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="jLY-T2-BHX">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="bWW-eq-erv"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="bWW-eq-erv"/>
                     </navigationItem>
                     <connections>
                         <outlet property="titleBar" destination="jLY-T2-BHX" id="UcO-JG-xtV"/>
@@ -507,7 +507,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Hook" id="7p0-C9-gcG">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="pUR-DM-5mx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pUR-DM-5mx">
                             <connections>
                                 <action selector="createHook:" destination="48G-v6-F07" id="oE8-wX-lcq"/>
                             </connections>
