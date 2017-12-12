@@ -241,6 +241,7 @@
                     <connections>
                         <outlet property="alphabetize" destination="8hK-t6-hTw" id="5Tx-No-tNN"/>
                         <outlet property="searchDisplayController" destination="nwZ-KC-Fsl" id="4Uy-MQ-KXt"/>
+                        <outlet property="tableView" destination="l7p-75-Zuu" id="C3m-RB-fu7"/>
                         <outlet property="view" destination="l7p-75-Zuu" id="JW8-py-v7j"/>
                     </connections>
                 </viewController>
@@ -356,53 +357,6 @@
             </objects>
             <point key="canvasLocation" x="1776.8" y="6.746626686656672"/>
         </scene>
-        <!--Filters Table View Controller-->
-        <scene sceneID="tcb-en-yJJ">
-            <objects>
-                <tableViewController id="ChW-ne-gUO" customClass="FiltersTableViewController" customModule="Current" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5hv-Fp-TVD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="yvi-zO-7ve">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvi-zO-7ve" id="KHu-mo-4Lv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ChW-ne-gUO" id="4gL-qp-c6f"/>
-                            <outlet property="delegate" destination="ChW-ne-gUO" id="Vnf-m9-gUg"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="FgC-kr-vhb"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcj-Dl-L88" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="428" y="1231"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="WbH-rN-nie">
-            <objects>
-                <navigationController id="JTe-EN-5KF" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Buk-ud-gmm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ChW-ne-gUO" kind="relationship" relationship="rootViewController" id="ZgW-wR-ehQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xIO-4p-OyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-399" y="1206"/>
-        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="wdb-Y8-hLX">
             <objects>
@@ -440,10 +394,10 @@
             </objects>
             <point key="canvasLocation" x="-2201" y="722"/>
         </scene>
-        <!--View Controller-->
+        <!--Hooks-->
         <scene sceneID="fig-Ob-a6E">
             <objects>
-                <viewController id="B64-5U-pVE" sceneMemberID="viewController">
+                <viewController title="Hooks" id="B64-5U-pVE" customClass="HooksViewController" customModule="Current" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HOJ-rD-b77"/>
                         <viewControllerLayoutGuide type="bottom" id="YUY-g4-AtG"/>
@@ -451,13 +405,121 @@
                     <view key="view" contentMode="scaleToFill" id="vx4-dN-lGp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-6V-ooi">
+                                <rect key="frame" x="112" y="559" width="151" height="29"/>
+                                <segments>
+                                    <segment title="My Hooks"/>
+                                    <segment title="Hooks"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changedIndex:" destination="B64-5U-pVE" eventType="valueChanged" id="g1v-px-jf4"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hWz-QV-jac">
+                                <rect key="frame" x="19.5" y="96" width="336" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="81u-cf-Cmb"/>
+                                    <constraint firstAttribute="height" constant="386" id="vAD-Pv-rcT"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Buu-rv-oxG">
+                                        <rect key="frame" x="0.0" y="28" width="336" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Buu-rv-oxG" id="w7x-tS-Blk">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="B64-5U-pVE" id="D7T-Mb-mbr"/>
+                                    <outlet property="delegate" destination="B64-5U-pVE" id="5Yy-I6-hBv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tv4-6V-ooi" firstAttribute="centerX" secondItem="vx4-dN-lGp" secondAttribute="centerX" id="L73-Xg-gId"/>
+                            <constraint firstItem="hWz-QV-jac" firstAttribute="centerX" secondItem="vx4-dN-lGp" secondAttribute="centerX" id="bXI-sm-3sZ"/>
+                            <constraint firstItem="hWz-QV-jac" firstAttribute="top" secondItem="HOJ-rD-b77" secondAttribute="bottom" constant="32" id="f3U-2f-qbJ"/>
+                            <constraint firstItem="YUY-g4-AtG" firstAttribute="top" secondItem="Tv4-6V-ooi" secondAttribute="bottom" constant="31" id="pNA-Eq-A9k"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sPI-Y0-tY6"/>
+                    <connections>
+                        <outlet property="hookSegmentControl" destination="Tv4-6V-ooi" id="ocr-WH-FFf"/>
+                        <outlet property="tableView" destination="hWz-QV-jac" id="OKe-87-TnQ"/>
+                        <outlet property="view" destination="hWz-QV-jac" id="Ihh-P4-hja"/>
+                        <segue destination="48G-v6-F07" kind="show" identifier="createHook" id="jEt-iI-Nky"/>
+                        <segue destination="OoL-ZG-s4G" kind="show" identifier="detailsOfHook" id="oEy-he-Slj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cr-ah-Bag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2202" y="1469"/>
+            <point key="canvasLocation" x="-2202.4000000000001" y="1468.5157421289357"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="e1i-3t-tCr">
+            <objects>
+                <viewController id="OoL-ZG-s4G" customClass="HookDetailsViewController" customModule="Current" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mjp-7x-AMN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ND3-QQ-6Z4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kL4-07-V1V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="jLY-T2-BHX">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="bWW-eq-erv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="titleBar" destination="jLY-T2-BHX" id="UcO-JG-xtV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rax-75-DVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2924" y="2293"/>
+        </scene>
+        <!--Create Hook-->
+        <scene sceneID="Vhq-TS-BeS">
+            <objects>
+                <viewController id="48G-v6-F07" customClass="CreateHookViewController" customModule="Current" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Noz-es-bhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="EZb-Pz-rG5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XUi-NC-EFq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hook Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NP4-9U-Qvn">
+                                <rect key="frame" x="40" y="135" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Hook" id="7p0-C9-gcG">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="pUR-DM-5mx">
+                            <connections>
+                                <action selector="createHook:" destination="48G-v6-F07" id="oE8-wX-lcq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hookNameTextField" destination="NP4-9U-Qvn" id="FMH-Wx-X8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzJ-3C-JAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2202" y="2293"/>
         </scene>
         <!--Profile-->
         <scene sceneID="tBX-sf-MPf">

@@ -8,18 +8,19 @@
 
 import UIKit
 
-class InspectUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class InspectUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
 
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
-     @IBOutlet var tableView : UITableView!
+    @IBOutlet var tableView : UITableView!
     
-    var thisUser : CurrentUser
+    var thisUser = CurrentUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var dummyInterests : [Interests]
+        var dummyInterests = [Interests]()
         dummyInterests.append(Interests.Gaming)
         dummyInterests.append(Interests.Writing)
         thisUser.setInterests(interests: dummyInterests)

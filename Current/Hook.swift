@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import CoreLocation
 
 class Hook: NSObject {
 //    var email : String?
@@ -16,20 +16,22 @@ class Hook: NSObject {
 //    var password : String?
 //    var userName : String?
     var name: String?
-    var ownerUserId : String? //CurrentUser.username
+    var ownerUserID : String? //CurrentUser.username
     var startDate: NSDate?
     var expirationDate: NSDate?
     var members : [CurrentUser]?
     var filters : [FiltersTableViewController.filters]?
-    var maxMembers: Int
+    var maxMembers: Int?
     var currentNumberOfMembers : [CurrentUser]?
     var hookId : String?
+    var currentLocation : CLLocation?
+    var eventLocation : CLLocation?
     
     
     init(name: String, ownerUserId : String, startDate: NSDate?, expirationDate: NSDate?, members : [CurrentUser]?, filters : [FiltersTableViewController.filters]?, maxMembers: Int, currentNumberOfMembers : [CurrentUser]?, hookId : String?) {
         
         self.name = name
-        self.ownerUserId = ownerUserId //CurrentUser.username
+        self.ownerUserID = ownerUserId //CurrentUser.username
         self.startDate = startDate
         self.expirationDate = expirationDate
         self.members = members
@@ -38,4 +40,14 @@ class Hook: NSObject {
         self.currentNumberOfMembers = currentNumberOfMembers
         self.hookId = hookId
     }
+    
+    init(name : String, ownerUserID : String)
+    {
+        self.name = name
+        self.ownerUserID = ownerUserID
+    }
+//    convenience override init() {
+//        self.init(name : String?)
+//
+//    }
 }

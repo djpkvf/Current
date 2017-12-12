@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class CurrentUser: NSObject {
     var email : String?
@@ -15,6 +16,9 @@ class CurrentUser: NSObject {
     var password : String?
     var userName : String?
     var interests : [Interests]?
+    var myLocation : CLLocation?
+    var depth : Int?
+    
     
     init(email: String, firstName: String, lastName : String, password : String, userName : String) {
     self.email = email
